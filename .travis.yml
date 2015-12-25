@@ -3,9 +3,9 @@ sudo: required
 language: bash
 
 before_install:
-  - sudo dpkg --add-architecture i386
   - sudo apt-get update
-  - sudo apt-get install bc device-tree-compiler lzma lzop ia32-libs ia32-libs-multiarch
+  - sudo apt-get install bc device-tree-compiler lzma lzop
+  #- sudo apt-get install ia32-libs ia32-libs-multiarch
 
 script:
   - ./build_kernel.sh
