@@ -4,7 +4,7 @@ language: bash
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install bc device-tree-compiler lzma lzop ia32-libs
+  - sudo apt-get install bc device-tree-compiler lzma lzop ia32-libs ia32-libs-multiarch
 
 script:
   - ./build_kernel.sh
