@@ -1,5 +1,13 @@
 language: bash
 
+apt:
+  packages:
+    - bc
+    - device-tree-compiler
+    - lzma
+    - lzop
+    - ia32-libs
+
 script:
   - ./build_kernel.sh
   - ./build_deb.sh
