@@ -1,0 +1,5 @@
+language: bash
+
+script:
+  - ./build_kernel.sh
+  - ./build_deb.sh
