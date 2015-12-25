@@ -5,7 +5,9 @@ language: bash
 before_install:
   - sudo apt-get update
   - sudo apt-get install bc device-tree-compiler lzma lzop
-  - sudo apt-get install ia32-libs ia32-libs-multiarch libgphoto2-2:i386 libsane:i386
+  # Why?! I probably do not understand how apt-get works, but it doesn't resolve all of its dependencies. We
+  # need the following monstrosity to install ia32-libs.
+  - sudo apt-get install ia32-libs ia32-libs-multiarch libgphoto2-2:i386 libsane:i386 libgd2-xpm:i386
 
 script:
   - ./build_kernel.sh
